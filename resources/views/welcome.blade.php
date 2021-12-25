@@ -61,7 +61,7 @@
     <div class="page page-center">
         <div class="container-tight py-4">
             <div class="text-center mb-4">
-                <a href="." class="navbar-brand navbar-brand-autodark"><img src="./static/logo.svg" height="36"
+                <a href="." class="navbar-brand navbar-brand-autodark"><img src="{{ asset('tabler/dist/img/static/logo.svg') }}" height="36"
                         alt=""></a>
             </div>
             <form class="card card-md" action="." method="get" autocomplete="off">
@@ -133,7 +133,7 @@
                 </div> --}}
             </form>
             <div class="text-center text-muted mt-3">
-                Vous n'avez pas encore de compte ? <a href="{{ route('index') }}" tabindex="-1">Inscription</a>
+                Vous n'avez pas encore de compte ? <a href="{{ route('tabler.index') }}" tabindex="-1">Inscription</a>
             </div>
         </div>
     </div>
