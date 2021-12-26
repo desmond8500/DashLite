@@ -3,11 +3,11 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateProviderTable extends Migration {
+class CreateDashProviderTable extends Migration {
 
 	public function up()
 	{
-		Schema::create('Provider', function(Blueprint $table) {
+		Schema::create('dash_provider', function(Blueprint $table) {
 			$table->increments('id');
 			$table->string('name');
 			$table->text('Description')->nullable();
@@ -22,6 +22,6 @@ class CreateProviderTable extends Migration {
 
 	public function down()
 	{
-		Schema::drop('Provider');
+		Schema::drop('dash_provider');
 	}
 }

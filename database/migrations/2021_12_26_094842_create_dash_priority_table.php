@@ -3,16 +3,14 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateProjectTable extends Migration {
+class CreateDashPriorityTable extends Migration {
 
 	public function up()
 	{
-		Schema::create('Project', function(Blueprint $table) {
+		Schema::create('dash_priority', function(Blueprint $table) {
 			$table->increments('id');
-			$table->integer('client_id')->unsigned();
 			$table->string('name');
-			$table->text('description')->nullable();
-			$table->string('status_id');
+			$table->integer('order')->nullable()->default('0');
 			$table->timestamps();
 			$table->softDeletes();
 		});
@@ -20,6 +18,6 @@ class CreateProjectTable extends Migration {
 
 	public function down()
 	{
-		Schema::drop('Project');
+		Schema::drop('dash_priority');
 	}
 }

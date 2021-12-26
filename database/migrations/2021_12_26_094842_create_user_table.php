@@ -3,14 +3,14 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateStatusTable extends Migration {
+class CreateUserTable extends Migration {
 
 	public function up()
 	{
-		Schema::create('Status', function(Blueprint $table) {
+		Schema::create('user', function(Blueprint $table) {
 			$table->increments('id');
 			$table->string('name');
-			$table->integer('order')->nullable()->default('0');
+			$table->string('email');
 			$table->timestamps();
 			$table->softDeletes();
 		});
@@ -18,6 +18,6 @@ class CreateStatusTable extends Migration {
 
 	public function down()
 	{
-		Schema::drop('Status');
+		Schema::drop('user');
 	}
 }

@@ -3,16 +3,14 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateClientTable extends Migration {
+class CreateDashBrandTable extends Migration {
 
 	public function up()
 	{
-		Schema::create('Client', function(Blueprint $table) {
+		Schema::create('dash_brand', function(Blueprint $table) {
 			$table->increments('id');
 			$table->string('name');
-			$table->mediumText('description');
-			$table->mediumText('address');
-			$table->string('logo');
+			$table->text('description')->nullable();
 			$table->timestamps();
 			$table->softDeletes();
 		});
@@ -20,6 +18,6 @@ class CreateClientTable extends Migration {
 
 	public function down()
 	{
-		Schema::drop('Client');
+		Schema::drop('dash_brand');
 	}
 }

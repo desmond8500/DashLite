@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class InvoiceRow extends Model 
+class DashInvoiceRow extends Model 
 {
 
-    protected $table = 'InvoiceRow';
+    protected $table = 'dash_invoice_row';
     public $timestamps = true;
 
     use SoftDeletes;
@@ -17,12 +17,12 @@ class InvoiceRow extends Model
 
     public function invoice()
     {
-        return $this->belongsTo('App\Models\Invoice', 'invoice_id');
+        return $this->belongsTo('App\Models\DashInvoice', 'invoice_id');
     }
 
     public function prority()
     {
-        return $this->hasOne('App\Models\Priority', 'prority-_id');
+        return $this->hasOne('App\Models\DashPriority', 'prority-_id');
     }
 
 }

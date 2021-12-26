@@ -1,40 +1,40 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\Status;
+use App\Models\DashStatus;
 
-class StatusTableSeeder extends Seeder {
+class DashStatusTableSeeder extends Seeder {
 
 	public function run()
 	{
-		//DB::table('Status')->delete();
+		//DB::table('dash_status')->delete();
 
 		// Seed1
-		Status::create(array(
+		DashStatus::create(array(
 				'name' => 'Nouveau',
 				'order' => 1
 			));
 
 		// Seed2
-		Status::create(array(
+		DashStatus::create(array(
 				'name' => 'En cours',
 				'order' => 2
 			));
 
 		// Seed3
-		Status::create(array(
+		DashStatus::create(array(
 				'name' => 'En pause',
 				'order' => 3
 			));
 
 		// Seed4
-		Status::create(array(
+		DashStatus::create(array(
 				'name' => 'Annulé',
 				'order' => 4
 			));
 
 		// Seed5
-		Status::create(array(
+		DashStatus::create(array(
 				'name' => 'Terminé',
 				'order' => 5
 			));

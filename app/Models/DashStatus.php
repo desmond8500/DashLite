@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Provider extends Model 
+class DashStatus extends Model 
 {
 
-    protected $table = 'Provider';
+    protected $table = 'dash_status';
     public $timestamps = true;
 
     use SoftDeletes;

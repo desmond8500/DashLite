@@ -9,10 +9,10 @@ class DatabaseSeeder extends Seeder {
 	{
 		Model::unguard();
 
-		$this->call('StatusTableSeeder');
-		$this->command->info('Status table seeded!');
+		$this->call('DashStatusTableSeeder');
+		$this->command->info('DashStatus table seeded!');
 
-		$this->call('PriorityTableSeeder');
-		$this->command->info('Priority table seeded!');
+		$this->call('DashPriorityTableSeeder');
+		$this->command->info('DashPriority table seeded!');
 	}
 }

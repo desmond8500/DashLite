@@ -5,14 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Status extends Model 
+class DashClient extends Model 
 {
 
-    protected $table = 'Status';
+    protected $table = 'dash_client';
     public $timestamps = true;
 
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];
+
+    public function projects()
+    {
+        return $this->hasMany('App\Models\DashProject');
+    }
 
 }

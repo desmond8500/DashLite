@@ -3,11 +3,11 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateInvoiceRowTable extends Migration {
+class CreateDashInvoiceRowTable extends Migration {
 
 	public function up()
 	{
-		Schema::create('InvoiceRow', function(Blueprint $table) {
+		Schema::create('dash_invoice_row', function(Blueprint $table) {
 			$table->increments('id');
 			$table->integer('invoice_id')->unsigned();
 			$table->string('name');
@@ -25,6 +25,6 @@ class CreateInvoiceRowTable extends Migration {
 
 	public function down()
 	{
-		Schema::drop('InvoiceRow');
+		Schema::drop('dash_invoice_row');
 	}
 }

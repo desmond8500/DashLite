@@ -3,14 +3,16 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreatePriorityTable extends Migration {
+class CreateDashClientTable extends Migration {
 
 	public function up()
 	{
-		Schema::create('Priority', function(Blueprint $table) {
+		Schema::create('dash_client', function(Blueprint $table) {
 			$table->increments('id');
 			$table->string('name');
-			$table->integer('order')->nullable()->default('0');
+			$table->mediumText('description');
+			$table->mediumText('address');
+			$table->string('logo');
 			$table->timestamps();
 			$table->softDeletes();
 		});
@@ -18,6 +20,6 @@ class CreatePriorityTable extends Migration {
 
 	public function down()
 	{
-		Schema::drop('Priority');
+		Schema::drop('dash_client');
 	}
 }

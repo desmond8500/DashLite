@@ -3,11 +3,11 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateArticleTable extends Migration {
+class CreateDashArticleTable extends Migration {
 
 	public function up()
 	{
-		Schema::create('Article', function(Blueprint $table) {
+		Schema::create('dash_article', function(Blueprint $table) {
 			$table->increments('id');
 			$table->string('name');
 			$table->string('reference')->default('_');
@@ -23,6 +23,6 @@ class CreateArticleTable extends Migration {
 
 	public function down()
 	{
-		Schema::drop('Article');
+		Schema::drop('dash_article');
 	}
 }

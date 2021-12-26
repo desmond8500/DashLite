@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Article extends Model 
+class DashArticle extends Model 
 {
 
-    protected $table = 'Article';
+    protected $table = 'dash_article';
     public $timestamps = true;
 
     use SoftDeletes;
@@ -17,12 +17,12 @@ class Article extends Model
 
     public function provider()
     {
-        return $this->hasOne('App\Models\Provider');
+        return $this->hasOne('App\Models\DashProvider');
     }
 
     public function brand()
     {
-        return $this->hasOne('App\Models\Brand');
+        return $this->hasOne('App\Models\DashBrand');
     }
 
 }
