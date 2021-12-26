@@ -14,7 +14,9 @@
         @livewire('tabler.sidebar')
         @livewire('tabler.header')
         <div class="page-wrapper">
-           @yield('content')
+            <div class="container-xl">
+                {{ $slot }}
+            </div>
         </div>
     </div>
     @livewireScripts

@@ -10,4 +10,6 @@ class Clients extends Component
     {
         return view('livewire.tabler.erp.clients');
     }
+
+    public $test = 0;
 }

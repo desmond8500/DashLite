@@ -1,4 +1,7 @@
 <div>
-    CLients
-    {{-- To attain knowledge, add things every day; To attain wisdom, subtract things every day. --}}
+    @component('components.tabler.page-header', ['breadcrumbs'=>[], 'title'=> 'Clients'])
+    <button class="btn btn-primary" wire:click="$toggle('test')">hello</button>
+    @endcomponent
+    <button class="btn btn-primary" wire:click="$toggle('test')">test</button>
+    {{ $test }}
 </div>
