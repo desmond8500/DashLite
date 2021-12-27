@@ -10,9 +10,9 @@ class CreateDashClientTable extends Migration {
 		Schema::create('dash_client', function(Blueprint $table) {
 			$table->increments('id');
 			$table->string('name');
-			$table->mediumText('description');
-			$table->mediumText('address');
-			$table->string('logo');
+			$table->mediumText('description')->nullable();
+			$table->mediumText('address')->nullable();
+			$table->string('logo')->nullable();
 			$table->timestamps();
 			$table->softDeletes();
 		});

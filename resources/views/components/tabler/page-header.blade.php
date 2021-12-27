@@ -5,18 +5,18 @@
                 <div class="mb-1">
                     <ol class="breadcrumb breadcrumb-alternate" aria-label="breadcrumbs">
                         <li class="breadcrumb-item"><a href="{{ route('tabler.index') }}">Accueil</a></li>
-                        @if ($breadcrumbs)
+                        {{-- @if ($breadcrumbs)
                             @foreach ($breadcrumbs as $breadcrumb)
                             <li class="breadcrumb-item">
                                 <a href="{{ route($breadcrumb->route) }}">{{ $breadcrumb->name}}</a>
                             </li>
 
                             @endforeach
-                        @endif
+                        @endif --}}
                     </ol>
                 </div>
                 <h2 class="page-title">
-                    <span class="text-truncate">{{ $title ?? 'Title'}}</span>
+                    <span class="text-truncate">{{ $page_header['title']}}</span>
                 </h2>
             </div>
             <div class="col-auto">

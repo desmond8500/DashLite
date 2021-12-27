@@ -6,21 +6,18 @@ use Illuminate\View\Component;
 
 class pageHeader extends Component
 {
-    public $title, $breadcrumbs;
+    public $page_header;
 
-    public function __construct($title, $breadcrumbs)
+    public function __construct($page_header)
     {
-        $this->title = $title;
-        $this->breadcrumbs = $breadcrumbs;
+        $this->page_header = collect($page_header);
     }
 
-    /**
-     * Get the view / contents that represent the component.
-     *
-     * @return \Illuminate\Contracts\View\View|\Closure|string
-     */
     public function render()
     {
         return view('components.tabler.page-header');
     }
+
+
 }
+

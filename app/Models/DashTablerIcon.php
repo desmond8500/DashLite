@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class DashTablerIcon extends Model 
+class DashTablerIcon extends Model
 {
 
     protected $table = 'dash_tabler_icon';
@@ -14,5 +14,7 @@ class DashTablerIcon extends Model
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];
+
+    protected $fillable = ['name', 'code'];
 
 }

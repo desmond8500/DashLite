@@ -14,5 +14,8 @@ class DatabaseSeeder extends Seeder {
 
 		$this->call('DashPriorityTableSeeder');
 		$this->command->info('DashPriority table seeded!');
+
+		$this->call('DashTablerIconTableSeeder');
+		$this->command->info('DashTablerIcon table seeded!');
 	}
 }

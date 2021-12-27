@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class DashClient extends Model 
+class DashClient extends Model
 {
 
     protected $table = 'dash_client';
@@ -14,6 +14,13 @@ class DashClient extends Model
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];
+
+    protected $fillable = [
+        'name',
+        'description',
+        'logo',
+        'address',
+    ];
 
     public function projects()
     {
